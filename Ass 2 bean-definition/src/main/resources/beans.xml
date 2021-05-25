@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+<!--default-init-method="init" default-destroy-method="destroy">-->
+
+    <context:annotation-config></context:annotation-config>
+
+    <bean id="userService" class="kz.iitu.beandefinition.UserService">
+          <!--init-method="init" destroy-method="destroy">-->
+        <property name="dbUrl" value="jdbc:mysql://localhost:3306?dbName"></property>
+        <property name="dbUsername" value="root"></property>
+        <property name="dbPassword" value="root"></property>
+    </bean>
+
+    <bean id="template" abstract="true">
+        <property name="id" value="-1"></property>
+    </bean>
+
+    <bean id="parent" class="kz.iitu.beandefinition.HelloWorld" parent="template">
+        <property name="message1" value="Hello everyone!"></property>
+        <property name="message2" value="Hello world!"></property>
+    </bean>
+
+    <bean id="child" class="kz.iitu.beandefinition.HelloMike" parent="parent">
+        <property name="id" value="1"></property>
+        <property name="message2" value="Hello Mike!"></property>
+        <property name="message3" value="You are welcome!"></property>
+    </bean>
+</beans>

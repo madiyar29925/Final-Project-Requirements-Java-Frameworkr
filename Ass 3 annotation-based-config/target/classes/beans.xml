@@ -1,0 +1,27 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xmlns:context="http://www.springframework.org/schema/context"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">-->
+
+<!--    <context:annotation-config></context:annotation-config>-->
+<!--    <context:property-placeholder location="application.properties"></context:property-placeholder>-->
+
+<!--    <bean id="job" class="kz.iitu.annotationbasedconf.Job">-->
+<!--        <property name="title" value="Java developer"></property>-->
+<!--    </bean>-->
+<!--    <bean id="ceo" class="kz.iitu.annotationbasedconf.Job">-->
+<!--        <property name="title" value="CEO"></property>-->
+<!--    </bean>-->
+
+<!--    <bean id="lang" class="kz.iitu.annotationbasedconf.ProgrammingLanguage">-->
+<!--        <constructor-arg name="name" value="Java"></constructor-arg>-->
+<!--    </bean>-->
+
+<!--    <bean id="developer"-->
+<!--          class="kz.iitu.annotationbasedconf.Developer"-->
+<!--          autowire="constructor">-->
+<!--&lt;!&ndash;        <property name="name" value="Mark"></property>&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="job" ref="job"></property>&ndash;&gt;-->
+<!--    </bean>-->
+<!--</beans>-->
