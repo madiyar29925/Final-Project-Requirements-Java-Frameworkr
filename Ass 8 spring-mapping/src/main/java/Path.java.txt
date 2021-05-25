@@ -1,0 +1,16 @@
+@Path("/users/{username}")
+public class UserResource {
+
+    @GET
+    @Produces("text/xml")
+    public String getUser(@PathParam("username") String userName) {
+        ...
+    }
+}
+
+@Path("users/{username: [a-zA-Z][a-zA-Z_0-9]*}")
+
+@Path("/{name1}/{name2}/")
+public class SomeResource {
+    ...
+}

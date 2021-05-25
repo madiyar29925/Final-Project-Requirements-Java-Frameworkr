@@ -1,0 +1,23 @@
+@Path("/myResource")
+@Produces("text/plain")
+public class SomeResource {
+    @GET
+    public String doGetAsPlainText() {
+        ...
+    }
+
+    @GET
+    @Produces("text/html")
+    public String doGetAsHtml() {
+        ...
+    }
+}
+
+@Produces(MediaType.APPLICATION_XML)
+@GET
+public Customer getCustomer() { ... }
+
+@Produces({"application/xml", "application/json"})
+public String doGetAsXmlOrJson() {
+    ...
+}

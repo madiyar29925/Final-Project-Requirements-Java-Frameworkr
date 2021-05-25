@@ -1,0 +1,36 @@
+@POST
+@Consumes("application/x-www-form-urlencoded")
+public void post(@FormParam("name") String name) {
+    // Store the message
+}
+
+@GET
+public String get(@Context UriInfo ui) {
+    MultivaluedMap<String, String> queryParams = ui.getQueryParameters();
+    MultivaluedMap<String, String> pathParams = ui.getPathParameters();
+}
+
+@GET
+public String get(@Context HttpHeaders hh) {
+    MultivaluedMap<String, String> headerParams = hh.getRequestHeaders();
+    Map<String, Cookie> pathParams = hh.getCookies();
+}
+
+
+@POST
+@Consumes("application/x-www-form-urlencoded")
+public void post(MultivaluedMap<String, String> formParams) {
+    // Store the message
+}
+
+@ApplicationPath("/webapi")
+public class MyApplication extends Application { ... }
+
+
+@Override
+public Set<Class<?>> getClasses() {
+    final Set<Class<?>> classes = new HashSet<>();
+    // register root resource
+    classes.add(MyResource.class);
+    return classes;
+}
